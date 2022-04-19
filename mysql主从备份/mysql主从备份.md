@@ -20,6 +20,7 @@
 
 ```shell
 ###主从数据库配置核心部分
+[mysqld]
 # 设置同步的binary log二进制日志文件名前缀，默认为binlog
 log-bin=mysql-bin
 # 服务器唯一id，默认为1  主数据库和从数据库的server-id不能重复
@@ -74,9 +75,11 @@ show master status;
 ### 2）从数据库操作
 
 ```mysql
-change master to MASTER_HOST='192.168.0.1',MASTER_PORT=3308,MASTER_USER='repl',MASTER_PASSWORD='123456',
-MASTER_LOG_FILE='mysql_bin.000003',MASTER_LOG_POS=2254;
+change master to MASTER_HOST='192.168.0.1',MASTER_PORT=3308,MASTER_USER='root',MASTER_PASSWORD='123456',
+MASTER_LOG_FILE='mysql_bin.000003',MASTER_LOG_POS=120;
 ```
+
+==需要替换自己的ip和端口==
 
 |      参数       |                   说明                    |
 | :-------------: | :---------------------------------------: |

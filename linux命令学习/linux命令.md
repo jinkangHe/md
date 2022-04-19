@@ -75,7 +75,11 @@ docker
 
 ```
 
+6. 获取文件最后几行
 
+```shell
+[hejinkang@ali ~]$ tail -n 100 log.out
+```
 
 
 

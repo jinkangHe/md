@@ -31,7 +31,7 @@
 
 ​			**https://github.com/medcl/elasticsearch-analysis-ik/releases下载与安装的ES版本相同的版本解压到ES的plugins目录即可，重新启动ES会自动加载plugins**
 
-![image-20210414142320923](ES（覃浩庚学习笔记）.assets/image-20210414142320923.png)
+![image-20210414142320923](ES.assets/image-20210414142320923.png)
 
 ​		**在安装好分词器之后，可以在Kibana中打开Dev Tools检查分词效果**
 
@@ -45,11 +45,11 @@ GET _analyze
 
 ​		**这是使用标准分词的效果，对中文十分不友好，会把搜索词按照每个字分割**
 
-​			<img src="ES（覃浩庚学习笔记）.assets/image-20210413142114190-1618388679528.png" alt="image-20210413142114190"  />
+​			<img src="ES.assets/image-20210413142114190-1618388679528.png" alt="image-20210413142114190"  />
 
 ​		**这是使用中文分词的效果**
 
-​			<img src="ES（覃浩庚学习笔记）.assets/image-20210413142223451.png" alt="image-20210413142223451"  />
+​			<img src="ES.assets/image-20210413142223451.png" alt="image-20210413142223451"  />
 
 ​	==注意：如果没有下载IK分词器，第二种请求会报错==
 
@@ -488,7 +488,7 @@ public void saveTest() {
 
 +  在做查询操作的时候一般都是调用**ElasticsearchRepository**的**search(SearchQuery searchQuery)**方法，这个方法里面的参数是一个接口，接口关系如下图所示：
 
-  ![SearchQuery](ES（覃浩庚学习笔记）.assets/SearchQuery.jpg)
+  ![SearchQuery](ES.assets/SearchQuery.jpg)
 
 +  可以看到我们构建**NativeSearchQuery**来完成一些复杂的查询
 
@@ -524,7 +524,7 @@ public void saveTest() {
     }
 ```
 
-![image-20210414142403863](ES（覃浩庚学习笔记）.assets/image-20210414142403863.png)
+![image-20210414142403863](ES.assets/image-20210414142403863.png)
 
 ### 		3）termQuery
 
@@ -639,8 +639,8 @@ public void boolQueryTest() {
   }
   ```
 
-  ![image-20210414160748825](ES（覃浩庚学习笔记）.assets/image-20210414160748825.png)
+  ![image-20210414160748825](ES.assets/image-20210414160748825.png)
 
   +  更多详细的用法请参考下图
 
-  ![image-20210414155251591](ES（覃浩庚学习笔记）.assets/image-20210414155251591.png)
+  ![image-20210414155251591](ES.assets/image-20210414155251591.png)
